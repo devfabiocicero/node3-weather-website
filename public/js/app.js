@@ -1,6 +1,4 @@
 
-console.log('Javascript file was loaded by the browser');
-
 const printMessage = message => {
     const p = document.createElement('p');
     
