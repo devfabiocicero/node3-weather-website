@@ -6,6 +6,7 @@ const geoCode = require('./utils/geocode');
 const getForecast = require('./utils/forecast');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Setup Template Engine
 const viewsFolder = path.join(__dirname, '/templates/views');
@@ -93,6 +94,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(port, () => {
+    console.log('Server is up on port ', port);
 });
