@@ -10,7 +10,7 @@ const getForecast = (latitude, longitude, cb) => {
         } else if (body.error) {
             cb('Unable to find location.');
         } else {
-            cb(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' celcius degress out. There is a ' + body.currently.precipProbability + '% chance of rain.');
+            cb(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' celcius degress out. The max tempeture was ' + body.daily.data[0].temperatureHigh + ', with min of ' + body.daily.data[0].temperatureLow + '. There is a ' + body.currently.precipProbability + '% chance of rain.');
         }
     });
 };

@@ -29,8 +29,8 @@ const getWeather = location => {
 
                 clearMessage();
 
-                printMessage('Location: ' + res.location);
-                printMessage('Forescast: ' + res.forecast);
+                printMessage(res.location);
+                printMessage(res.forecast);
             });
         });
 };
